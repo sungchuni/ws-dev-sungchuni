@@ -16,7 +16,11 @@ export default class PageLine extends React.Component {
       <Container>
         <Line
           data={[
-            { value: 1, title: "2019.5월", subtitle: "1,293,293원" },
+            {
+              value: 1,
+              title: "2019.5월",
+              countUp: { start: 0, end: 1293293, suffix: "원" }
+            },
             { value: 2 + Math.random() ** 2, title: "", subtitle: "" },
             { value: 3 + Math.random() ** 2, title: "", subtitle: "" },
             { value: 4 + Math.random() ** 2, title: "", subtitle: "" },
@@ -25,7 +29,12 @@ export default class PageLine extends React.Component {
             { value: 7 + Math.random() ** 2, title: "", subtitle: "" },
             { value: 8 + Math.random() ** 2, title: "", subtitle: "" },
             { value: 9 + Math.random() ** 2, title: "", subtitle: "" },
-            { value: 10, title: "2020.1월", subtitle: "48,273,389원" }
+            {
+              value: 10,
+              title: "2020.1월",
+              subtitle: "48,273,389원",
+              countUp: { start: 1293293, end: 48273389, suffix: "원" }
+            }
           ]}
           options={{
             title: "월별 상환 수익액 (세후)",
